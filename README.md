@@ -1,6 +1,10 @@
 # githubstar
 A react-native app that uses the github api to display most starred github repositories
 
+**Hosted App**
+---
+ [Click Here Hosted App](https://expo.io/@acrobat/twende-github)
+
 **Local Installation**
 ---
 
@@ -14,3 +18,4 @@ A react-native app that uses the github api to display most starred github repos
    `$ expo start `
  
 4. Install expo on mobile device to run the app and scan
+
