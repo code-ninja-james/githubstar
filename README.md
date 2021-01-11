@@ -5,7 +5,7 @@ A react-native app that uses the github api to display most starred github repos
 ---
 
 1. Download with :<br/>
-     `$ git clone https://github.com/code-ninja-james/githubstar `
+     `$ git clone https://github.com/code-ninja-james/githubstar.git `
 
 2. Install with  :<br/>
 `$ cd githubstar && yarn install `
