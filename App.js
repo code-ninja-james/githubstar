@@ -1,21 +1,30 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
+import React,{useState} from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import AppLoading from 'expo-app-loading';
+import { useFonts } from 'expo-font';
+import {Provider}from 'react-redux';
+
+import AppNavigator from './src/navigation/AppNavigator';
+import store from './src/redux /store';
+
+
 
 export default function App() {
+  let [fontsLoaded] = useFonts({
+    'Ubuntu':require('./assets/fonts/Ubuntu-Regular.ttf'),
+    'Ubuntu-Bold':require('./assets/fonts/Ubuntu-Bold.ttf'),
+  });
+
+  if (!fontsLoaded) {
+    return <AppLoading />;
+  } else {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+   <Provider store={store}>
+<AppNavigator/>
+   </Provider>
   );
 }
-
+}
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+ 
 });
